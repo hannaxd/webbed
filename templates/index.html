@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+
+{% block seo %}
+    <title>{{ config.extra.title }}</title>
+    <meta name="title" content="{{ config.extra.title }}"/>
+    <meta name="description" content="{{ config.extra.description }}"/>
+
+    <!-- open graph bruh -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ config.base_url}}{{ section.path }}" />
+    <meta property="og:title" content="{{ config.extra.title }}">
+    <meta property="og:description" content="{{ config.extra.description }}" />
+
+    <!-- le birdsite -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="{{ config.base_url }}{{ section.path }}" />
+    <meta property="twitter:title" content="{{ config.extra.title }}" />
+    <meta property="twitter:description" content="{{ config.extra.description }}" />
+{% endblock seo %}
+
+{% block content %}
+<h1>about me</h1>
+<p>welcome to this internet corner where i store my delusions :3c</p>
+<p>i dont want to tell you too much about myself and you probably dont want to read a giant wall of text. long story
+    short, i usually mess around with bad code and anything linux.</p>
+<p>i speak german and english but im also learning swedish.<br>beyond that, i mostly work with rust, go and web stuff.
+</p>
+<h1>about this site</h1>
+<p>i write shit whenever i feel like it. dont expect any coherence.</p>
+<p>i also cant be bothered to spend hours on some shitty bloated mess so if the minimalism bothers you, fuck off &lt;3</p>
+<h1>find me elsewhere</h1>
+<p>discord & twitter: @nixfemby<br>freddyverse: <a href="https://labyrinth.zone/lyra" target="_blank">@lyra@labyrinth.zone</a><br/>bruhsky: i forgor</p>
+{%endblock content %}

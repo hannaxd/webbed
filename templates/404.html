@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block seo %}
+    <title>404</title>
+    <meta name="title" content="404"/>
+    <meta name="description" content="this delusion doesnt exist"/>
+
+    <!-- open graph bruh -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="404">
+    <meta property="og:description" content="this delusion doesnt exist" />
+
+    <!-- le birdsite -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="404" />
+    <meta property="twitter:description" content="this delusion doesnt exist" />
+{% endblock seo %}
+
+{% block content %}
+<div id="oopsie-404">
+    <h1>oh no</h1>
+    <p>this page doesnt exist</p>
+    <a href="/">go back &lt;3</a>
+</div>
+{% endblock content %}

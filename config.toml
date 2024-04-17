@@ -1,0 +1,26 @@
+# The URL the site will be built for
+base_url = "https://nixfemby.net"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# atom feed :3c
+generate_feed = true
+author = "Ruby"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[extra]
+title = "nixfemby :3c"
+description = "a place for my delusions"

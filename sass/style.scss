@@ -1,0 +1,237 @@
+@import "utils/reset";
+@import "utils/fonts";
+@import "theme";
+
+html {
+  // lmfao
+  background-color: $bg;
+  color: $text;
+}
+
+body {
+  font-family: Lexend, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif;
+  font-weight: normal;
+  font-size: clamp(1.1rem, calc(1.1rem + 0.00vw), 1.1rem);
+  line-height: 1.25;
+
+  max-width: 720px;
+  margin: auto;
+  padding: 4rem 1rem 3rem 1rem;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  padding: 0px 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary;
+  font-weight: bolder;
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before {
+  content: "#";
+  padding-right: 6px;
+}
+
+a {
+  border-bottom: 2px solid $primary;
+  cursor: pointer;
+  color: $text;
+  text-decoration: none;
+  margin-right: 8px;
+  padding: 1px 3px;
+}
+
+a:visited {
+  color: $text;
+}
+
+a:hover {
+  background-color: $primary;
+  color: $bg;
+  text-decoration: none;
+  border-radius: 0.3rem;
+}
+
+p {
+  margin: 16px 5px;
+}
+
+hr {
+  border-color: $bgLight;
+}
+
+header {
+  margin-bottom: 40px;
+  h2 {
+    color: $text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  h2::before {
+    content: "◃";
+    color: $primary;
+  }
+  h2::after {
+    content: "▹";
+    padding-left: 6px;
+    color: $primary;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#exports-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    width: 75%;
+    text-align: center;
+    margin: 3px 0px;
+  }
+}
+
+#error-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h1::before {
+    content: none;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+
+  p {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+  }
+}
+
+.hidden {
+  color: $text;
+  border: none;
+}
+
+.hidden:hover {
+  background-color: inherit;
+  color: inherit;
+}
+
+.posts-list {
+  padding: 0;
+}
+
+.posts-list li {
+  list-style: none;
+  margin-bottom: 0.2rem;
+
+  a {
+    margin: 0;
+    padding: 0;
+
+    h4 {
+      color: $text;
+    }
+
+    h4::before {
+      color: $primary;
+    }
+  }
+}
+
+.posts-list li a:hover {
+  color: $text;
+  background-color: inherit;
+  border-color: $secondary;
+  border-radius: 0;
+}
+
+.header, .post-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+#oopsie-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h1::before {
+    content: none;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+// Bourgeoisie Proofing
+// This prolly isnt perfect yet but I dont have a 4k screen :trol:
+@media screen and (min-width: 1921px){
+  body {
+    max-width: 70.3rem;
+    font-size: 2.75rem;
+  }
+
+  h1 {
+    font-size: 4.25rem !important;
+  }
+
+  h2 {
+    font-size: 3.75rem !important;
+  }
+
+  footer {
+    font-size: 2rem !important;
+  }
+}
